@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-image:url("/assert/dog.jpeg/wordcount.jpeg");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            width:300px;
+            height: 400px;
+            margin-left:300px;
+            
+        }
+        h1{
+            color:white;
+            font-style:italic;
+            text-align:center:
+          
+        }
+    </style>
+</head>
+<body>
+    <script>
+       function countWords(){
+        var text=document.getElementById("inputText").value;
+        var words=text.split(/\s+/).filter(function(word){
+            return word.length > 0;
+});
+    var wordCount=words.length;
+    document.getElementById("wordoutput").textContent="word Count:"+wordCount;
+}
+
+    </script><div>
+    <h1>"WORD COUNT."</h1>
+    <textarea id="inputText" row="9" col="10" placeholder="Enter ur text here...."></textarea><br><br>
+    <button onclick="countWords()">WORDS:</button>
+    <p id="wordoutput"></p>
+  </div>  
+</body>
+</html>
